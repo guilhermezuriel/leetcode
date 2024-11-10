@@ -1,3 +1,5 @@
+import { execute } from '../test';
+
 function isMonotonic(nums: number[]): boolean {
   const n = nums.length;
   const last = n - 1;
@@ -41,15 +43,10 @@ function isMonotonic(nums: number[]): boolean {
   return true;
 }
 
-function main() {
-  let testes = [
-    [1, 2, 2, 3],
-    [6, 5, 4, 4],
-    [1, 3, 2],
-  ];
-  for (let teste of testes) {
-    console.log(isMonotonic(teste));
-  }
-}
+let testes = [
+  [1, 2, 2, 3],
+  [6, 5, 4, 4],
+  [1, 3, 2],
+];
 
-main();
+execute(testes, isMonotonic);
